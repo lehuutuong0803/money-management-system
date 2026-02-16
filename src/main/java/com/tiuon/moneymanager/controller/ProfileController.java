@@ -51,6 +51,12 @@ public class ProfileController {
         }
     }
 
+    @GetMapping("/profile")
+    public ResponseEntity<ProfileDto> getPublicProfile() {
+        ProfileDto profileDto = iProfileService.getPublicProfile(null);
+        return  ResponseEntity.status(HttpStatus.OK).body(profileDto);
+    }
+
     @GetMapping("/test")
     public String test() {
         return "Test successful";

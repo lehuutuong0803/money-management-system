@@ -13,4 +13,5 @@ public interface IProfileService {
     boolean isAccountActive(String email);
     Map<String, Object> authenticationAndGenerateToken(AuthDto authDto);
     ProfileEntity getCurrentProfile();
+    ProfileDto getPublicProfile(String email);
 }

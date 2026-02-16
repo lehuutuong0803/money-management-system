@@ -45,7 +45,7 @@ public class ProfileServiceImpl implements IProfileService {
         String activationLink = activationURL + "/api/v1.0/activate?token=" + newProfile.getActivationToken();
         String subject = "Activate your Money Manager Account";
         String body = "Click on the following link to activate your account: " + activationLink;
-//        iEmailService.sendEmail(newProfile.getEmail(), subject, body);
+        iEmailService.sendEmail(newProfile.getEmail(), subject, body);
 
         return ProfileMapper.toDto(newProfile);
     }
