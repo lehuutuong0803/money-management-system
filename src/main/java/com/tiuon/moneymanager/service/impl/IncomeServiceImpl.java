@@ -35,9 +35,9 @@ public class IncomeServiceImpl implements IIcomeService {
     }
 
     // retrieve all incomes for the current month/based on the start date and end date
-    public List<IncomeDto> getCurrentMonthExpensesForCurrentUser() {
+    public List<IncomeDto> getCurrentMonthIncomesForCurrentUser() {
         ProfileEntity profile = iProfileService.getCurrentProfile();
-        LocalDate now = LocalDate.now();
+        LocalDate now  = LocalDate.now();
         LocalDate startDate = now.withDayOfMonth(1);
         LocalDate endDate = now.withDayOfMonth(now.lengthOfMonth());
         List<IncomeEntity> incomeEntityList = incomeRepository.findByProfileIdAndDateBetween(profile.getId(),

@@ -1,6 +1,7 @@
 package com.tiuon.moneymanager.service;
 
 import com.tiuon.moneymanager.dto.IncomeDto;
+import com.tiuon.moneymanager.entity.ProfileEntity;
 import org.springframework.data.domain.Sort;
 
 import java.math.BigDecimal;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public interface IIcomeService {
     IncomeDto addIncome(IncomeDto incomeDto);
-    List<IncomeDto> getCurrentMonthExpensesForCurrentUser();
+    List<IncomeDto> getCurrentMonthIncomesForCurrentUser();
     void deleteIncome(Long incomeId);
     List<IncomeDto> getLatest5IncomeForCurrentUser();
     BigDecimal getTotalIncomeForCurrentUser();

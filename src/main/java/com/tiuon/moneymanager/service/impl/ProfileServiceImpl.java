@@ -8,6 +8,7 @@ import com.tiuon.moneymanager.repository.ProfileRepository;
 import com.tiuon.moneymanager.service.IEmailService;
 import com.tiuon.moneymanager.service.IProfileService;
 import com.tiuon.moneymanager.util.JwtUtil;
+import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,6 +20,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
 

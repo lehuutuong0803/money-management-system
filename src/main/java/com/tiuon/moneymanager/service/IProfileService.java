@@ -3,7 +3,9 @@ package com.tiuon.moneymanager.service;
 import com.tiuon.moneymanager.dto.AuthDto;
 import com.tiuon.moneymanager.dto.ProfileDto;
 import com.tiuon.moneymanager.entity.ProfileEntity;
+import jakarta.mail.MessagingException;
 
+import java.io.IOException;
 import java.util.Map;
 
 public interface IProfileService {

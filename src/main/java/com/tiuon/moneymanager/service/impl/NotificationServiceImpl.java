@@ -86,6 +86,4 @@ public class NotificationServiceImpl implements INotificationService {
 
         log.info("Job Completed: sendDailyExpenseSummary");
     }
-
-
 }

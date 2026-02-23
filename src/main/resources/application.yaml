@@ -28,8 +28,8 @@ spring:
             enable: true
     protocol: smtp
     # Activate profile
-#  profiles:
-#    active: "prod"
+  profiles:
+    active: "prod"
 
 # JWT Configuration
 # Generate a secure secret key (minimum 256 bits for HS256)
@@ -56,6 +56,8 @@ money:
 app:
   activation:
     url: ${MONEY_MANAGER_BACKEND_URL}
+  email:
+    name: "Money Manager App"
 
 
 
