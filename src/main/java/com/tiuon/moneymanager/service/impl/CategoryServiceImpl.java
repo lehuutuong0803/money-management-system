@@ -8,6 +8,7 @@ import com.tiuon.moneymanager.repository.CategoryRepository;
 import com.tiuon.moneymanager.service.ICategoryService;
 import com.tiuon.moneymanager.service.IProfileService;
 import lombok.RequiredArgsConstructor;
+import org.apache.logging.log4j.util.InternalException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,6 +37,9 @@ public class CategoryServiceImpl implements ICategoryService {
         ProfileEntity profileEntity = iProfileService.getCurrentProfile();
         //It's safer to ensure the list is initialized (e.g., new ArrayList<>()) in service.
         List<CategoryEntity> categoryEntityList = categoryRepository.findByProfileId(profileEntity.getId());
+        if (true) {
+            throw new InternalException("Server went down!");
+        }
         return categoryEntityList.stream().map(CategoryMapper::toDto).toList();
     }
 
